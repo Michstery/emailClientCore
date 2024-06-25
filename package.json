@@ -1,0 +1,26 @@
+{
+  "name": "email-client-core",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "node appServer.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@elastic/elasticsearch": "^8.14.0",
+    "dotenv": "^16.4.5",
+    "elasticsearch": "^16.7.3",
+    "express": "^4.19.2",
+    "http": "^0.0.1-security",
+    "imap": "^0.8.19",
+    "mailparser": "^3.7.1",
+    "simple-node-logger": "^21.8.12",
+    "socket.io": "^4.7.5",
+    "stream": "^0.0.2",
+    "uuid": "^10.0.0"
+  }
+}
