@@ -375,18 +375,13 @@
                 "Users"
               ],
               "summary": "Get All App Users",
-              "requestBody": {
-                "content": {
-                  "application/json": {
-                    "schema": {
-                      "type": "object",
-                      "example": {
-                        "indexName":"users"
-                      }
-                    }
-                  }
+              "parameters": [
+                {
+                    "in": "query",
+                    "name": "indexName",
+                    "type": "String"
                 }
-              },  
+            ],  
               "responses": {
                 "200": {
                   "description": "OK",
@@ -531,19 +526,18 @@
                 "Users"
               ],
               "summary": "Get An App Users",
-              "requestBody": {
-                "content": {
-                  "application/json": {
-                    "schema": {
-                      "type": "object",
-                      "example": {
-                        "indexName":"users",
-                        "userId": ""
-                      }
-                    }
-                  }
+              "parameters": [
+                {
+                    "in": "query",
+                    "name": "indexName",
+                    "type": "String"
+                },
+                {
+                    "in": "query",
+                    "name": "userId",
+                    "type": "String"
                 }
-              },  
+            ], 
               "responses": {
                 "200": {
                   "description": "OK",

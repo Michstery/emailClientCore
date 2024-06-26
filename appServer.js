@@ -184,7 +184,7 @@ app.get('/emails', async (req, res) => {
 }),
 
 app.get('/user', async (req, res)=> {
-    const {indexName, userId} = req.body
+    const {indexName, userId} = req.query
     try {
         const result = await esClient.get({
           index: indexName,
@@ -199,7 +199,7 @@ app.get('/user', async (req, res)=> {
 })
 
 app.get('/users', async (req, res)=> {
-    const {indexName} = req.body
+    const {indexName} = req.query
     try {
         const result = await esClient.search({
           index: indexName,
