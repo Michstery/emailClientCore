@@ -10,6 +10,8 @@ const port = 3000;
 require('dotenv/config')
 const { ReadableStream } = require('stream/web');
 global.ReadableStream = global.ReadableStream || ReadableStream;
+const swaggerUI = require("swagger-ui-express");
+const swaggerDocument = require("./swagger.json");
 
 
 // Initialize Elasticsearch client
@@ -30,6 +32,9 @@ app.use(express.json());
 io.on('connection', (app) => {
     console.log('a user connected');
 });
+
+// ==========  ~SWAGGER DEPENDECIES~ ==============// 
+app.use("/docs", swaggerUI.serve, swaggerUI.setup(swaggerDocument));
   
   const notifyClient = (userId, event, data) => {
     io.to(userId).emit(event, data);

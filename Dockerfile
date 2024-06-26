@@ -1,5 +1,5 @@
 # Dockerfile
-FROM node:16-alpine
+FROM node:18-alpine
 
 
 # Create app directory
@@ -17,4 +17,4 @@ EXPOSE 3000
 
 
 
-CMD [ "node", "appServer.js" ]
+CMD [ "npm", "run", "dev" ]
