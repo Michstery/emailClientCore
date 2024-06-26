@@ -76,7 +76,6 @@ app.post('/register', async (req, res) => {
     tls: true
   });
   if (!imap) return "Error Connecting To IMAP SERVER"
-  console.log({imap})
 
   imap.once('ready', async () => {
     // Save user details to Elasticsearch
