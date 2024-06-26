@@ -31,7 +31,7 @@ docker-compose up --build
     - /users      Get All App Users
     - /user       Get A Single App User
 
-6. SWAGGER UI was employed for UI Design 
+6. SWAGGER UI was employed for UI  
    - https://emailclientcore-2.onrender.com/docs/#/
 
 7. API Test can be done Using Postman, Swagger or any other API test tool.
