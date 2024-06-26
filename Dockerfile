@@ -1,5 +1,5 @@
 # Dockerfile
-FROM node:18-alpine
+FROM node:19-alpine
 
 
 # Create app directory

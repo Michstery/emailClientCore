@@ -17,6 +17,10 @@ services:
       - "3000:3000"
     depends_on:
       - elasticsearch
+    environment:
+      - CLOUD_ID=${CLOUD_ID}
+      - CLOUD_USERNAME=${CLOUD_USERNAME}
+      - CLOUD_PASSWORD=${CLOUD_PASSWORD}
 
 volumes:
   esdata:
