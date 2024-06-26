@@ -183,21 +183,28 @@
                 "Users"
               ],
               "summary": "Get All Synced Emails",
-              "requestBody": {
-                "content": {
-                  "application/json": {
-                    "schema": {
-                      "type": "object",
-                      "example": {
-                        "email":"",
-                        "password": "",
-                        "emailService":"",
-                        "userId":""
-                      }
-                    }
-                  }
+              "parameters": [
+                {
+                    "in": "query",
+                    "name": "email",
+                    "type": "String"
+                },
+                {
+                    "in": "query",
+                    "name": "password",
+                    "type": "String"
+                },
+                {
+                    "in": "query",
+                    "name": "emailService",
+                    "type": "String"
+                },
+                {
+                    "in": "query",
+                    "name": "userId",
+                    "type": "String"
                 }
-              },  
+            ],
               "responses": {
                 "200": {
                   "description": "OK",

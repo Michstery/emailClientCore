@@ -97,7 +97,7 @@ app.post('/register', async (req, res) => {
 });
 
 app.get('/emails', async (req, res) => {
-    const { email, password, emailService, userId } = req.body;
+    const { email, password, emailService, userId } = req.query;
     //password refers to Application password not user password
         if (emailService == 'gmail'){
             imapConfig = {
